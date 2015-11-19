@@ -1,0 +1,30 @@
+.my-controller {
+  border: 1px solid #f4f4f4;
+  padding: 5px;
+  margin: 3px;
+  .results{
+    li.ng-scope{
+      width:24%;
+      display: inline-table;
+      padding: 10px;
+      vertical-align: top;
+    }
+    ul, li{
+      padding: 0;
+      list-style-type: none;
+    }
+    img {
+      width:auto;
+      max-height: 200px;
+    }
+    .img-container {
+      height: 200px;
+    }
+  }
+}
+footer{
+  height: 200px;
+  background: #4e7dff;
+
+
+}
