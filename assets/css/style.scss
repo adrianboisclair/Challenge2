@@ -1,5 +1,4 @@
 .my-controller {
-  border: 1px solid #f4f4f4;
   padding: 0;
   margin: 0;
   //Style Results
@@ -7,8 +6,11 @@
     min-height: 60vh;
     //Style Result
     div.result{
-      vertical-align: top;
-      min-height: 500px;
+      border-bottom: 1px solid rgba(0, 0, 0, .05);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      vertical-align: middle;
+      min-height: 400px;
       h3{
         font-size:16px;
       }
@@ -33,10 +35,17 @@
 .header{
   background: #2D2D2D;
   padding:40px 20px;
-
+  a {
+    color: #f0ad4e;
+  }
   .active,.nav>li>a:hover, .nav>li>a:focus{
     background: rgba(255,255,255,.2);
-    border-radius: 10px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .navbar-nav>li>a{
+    margin-top: 10px;
+    padding: 5px;
   }
   .form-inline{
     padding:10px;
@@ -44,10 +53,23 @@
   .form-control{
     display:inline;
   }
+  .options-group{
+    .ipp-container{
+      display: flex;
+      justify-content: flex-end;
+      padding:0;
+      margin-top: 10px;
+      input[type=checkbox]{
+        margin: 11px;
+      }
+    }
+    input.ipp { //Items Per Page
+      width: 60px;
+    }
+  }
   label{
     display: table-row;
     color:#f0ad4e;
-    padding-top: 10px;
     text-align: right;
   }
   input#search{
@@ -70,7 +92,6 @@
   }
 }
 footer{
-  //height: 200px;
   background: #2D2D2D;
   display: block;
   text-align: center;
@@ -94,4 +115,7 @@ footer{
   ul.nav.navbar-nav li {  margin-bottom:10px;  text-align: center;  }
   .header{  padding:20px;  }
   .pagination>li>a, .pagination>li>span {  padding: 5px;  }
+  .ipp-container{
+    display: block;
+  }
 }
