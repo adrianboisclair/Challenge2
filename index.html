@@ -68,7 +68,7 @@
                                 <h1>Welcome!</h1>
                                 <h3>Please enter a search term in the header above to get started!</h3>
                             </div>
-                            <div class="result col-xs-12 col-sm-4 col-md-4 col-lg-3" dir-paginate="product in products | filter:searchTerm | itemsPerPage: pageSize" current-page="currentPage">
+                            <div class="result col-xs-6 col-sm-6 col-md-4 col-lg-3" dir-paginate="product in products | filter:searchTerm | itemsPerPage: pageSize" current-page="currentPage">
                                 <div class="img-container">
                                     <img class="img-responsive center-block" ng-src="{{product.product.photo || defaultImage}}">
                                 </div>
