@@ -25,6 +25,13 @@
 .header{
   background: black;
   padding:40px 20px;
+  .active,.nav>li>a:hover, .nav>li>a:focus{
+    background: rgba(255,255,255,.2);
+    border-radius: 10px;
+  }
+  .form-inline{
+    padding:10px;
+  }
   .form-control{
     display:inline;
   }

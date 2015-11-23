@@ -45,7 +45,7 @@ function MyController($scope, $http, $location){
         console.log('going to page ' + num);
     };
 }
-function OtherController($scope, $location) {
-}
+function OtherController($scope, $location) {}
+
 myApp.controller('MyController', MyController);
 myApp.controller('OtherController', OtherController);

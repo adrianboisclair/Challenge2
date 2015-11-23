@@ -19,6 +19,11 @@
 .header {
   background: black;
   padding: 40px 20px; }
+  .header .active, .header .nav > li > a:hover, .header .nav > li > a:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px; }
+  .header .form-inline {
+    padding: 10px; }
   .header .form-control {
     display: inline; }
   .header .input-group-addon {
