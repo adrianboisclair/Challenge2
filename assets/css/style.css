@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0; }
   .my-controller .results {
-    min-height: 100vh; }
+    min-height: 60vh; }
     .my-controller .results div.result {
       vertical-align: top;
       min-height: 500px; }
@@ -21,7 +21,7 @@
       height: 200px; }
 
 .header {
-  background: black;
+  background: #2D2D2D;
   padding: 40px 20px; }
   .header .active, .header .nav > li > a:hover, .header .nav > li > a:focus {
     background: rgba(255, 255, 255, 0.2);
@@ -30,8 +30,20 @@
     padding: 10px; }
   .header .form-control {
     display: inline; }
+  .header label {
+    display: table-row;
+    color: #f0ad4e;
+    padding-top: 10px;
+    text-align: right; }
+  .header input#search {
+    border: 0; }
   .header .input-group-addon {
-    cursor: pointer; }
+    cursor: pointer;
+    background: #f0ad4e;
+    border-color: #f0ad4e; }
+  .header .input-group-addon:last-of-type {
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important; }
   .header button#dropdownMenu1 {
     padding: 0;
     margin: 0;
@@ -39,8 +51,14 @@
     background: none; }
 
 footer {
-  height: 200px;
-  background: black; }
+  background: #2D2D2D;
+  display: block;
+  text-align: center;
+  padding: 40px; }
+  footer small {
+    vertical-align: middle;
+    color: white;
+    text-align: center; }
 
 .result.ng-enter {
   /* standard transition code */
@@ -57,5 +75,16 @@ footer {
 .result.ng-enter.ng-enter-active {
   /* standard transition styles */
   opacity: 1; }
+
+@media (max-width: 768px) {
+  ul.nav.navbar-nav li {
+    margin-bottom: 10px;
+    text-align: center; }
+
+  .header {
+    padding: 20px; }
+
+  .pagination > li > a, .pagination > li > span {
+    padding: 5px; } }
 
 /*# sourceMappingURL=style.css.map */

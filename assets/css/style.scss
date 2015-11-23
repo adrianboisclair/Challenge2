@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   .results{
-    min-height: 100vh;
+    min-height: 60vh;
     div.result{
       vertical-align: top;
       min-height: 500px;
@@ -29,8 +29,9 @@
   }
 }
 .header{
-  background: black;
+  background: #2D2D2D;
   padding:40px 20px;
+
   .active,.nav>li>a:hover, .nav>li>a:focus{
     background: rgba(255,255,255,.2);
     border-radius: 10px;
@@ -41,8 +42,23 @@
   .form-control{
     display:inline;
   }
+  label{
+    display: table-row;
+    color:#f0ad4e;
+    padding-top: 10px;
+    text-align: right;
+  }
+  input#search{
+    border:0;
+  }
   .input-group-addon{
     cursor: pointer;
+    background: #f0ad4e;
+    border-color: #f0ad4e;
+  }
+  .input-group-addon:last-of-type {
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
   }
   button#dropdownMenu1 {
     padding: 0;
@@ -51,13 +67,18 @@
     background: none;
   }
 }
-
 footer{
-  height: 200px;
-  background: black;
+  //height: 200px;
+  background: #2D2D2D;
+  display: block;
+  text-align: center;
+  padding: 40px;
+  small{
+    vertical-align: middle;
+    color: white;
+    text-align: center;
+  }
 }
-
-
 .result.ng-enter {
   /* standard transition code */
   transition: 1s linear all;
@@ -74,4 +95,17 @@ footer{
 .result.ng-enter.ng-enter-active {
   /* standard transition styles */
   opacity:1;
+}
+@media (max-width: 768px) {
+  ul.nav.navbar-nav li {
+    margin-bottom:10px;
+    text-align: center;
+  }
+  .header{
+    padding:20px;
+  }
+  .pagination>li>a, .pagination>li>span {
+    padding: 5px;
+  }
+
 }
