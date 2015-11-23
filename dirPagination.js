@@ -282,6 +282,7 @@
                 if (isValidPageNumber(num)) {
                     num = parseInt(num, 10);
                     paginationService.setCurrentPage(paginationId, num);
+
                 }
             };
 
@@ -291,6 +292,7 @@
                     scope.pagination.current = num;
                     updateRangeValues();
 
+                    //scope.pageNumber= scope.pagination.current;
                     // if a callback has been set, then call it with the page number as an argument
                     if (scope.onPageChange) {
                         scope.onPageChange({ newPageNumber : num });
