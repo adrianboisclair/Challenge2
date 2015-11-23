@@ -43,18 +43,6 @@
                     <li><a href="#">Login <span class="sr-only">(current)</span></a></li>
                     <li><a href="#">Sign Up</a></li>
                 </ul>
-                <!--<ul class="">-->
-                    <!--<li>-->
-                        <!--<a href="#">-->
-                            <!--Login-->
-                        <!--</a>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a href="#">-->
-
-                        <!--</a>Sign Up-->
-                    <!--</li>-->
-                <!--</ul>-->
             </div>
         </div>
     </div>
@@ -76,20 +64,24 @@
                     <hr/>
                     <div class="panel-body">
                         <div class="results">
+                            <div ng-hide="searchTerm">
+                                <h1>Welcome!</h1>
+                                <h3>Please enter a search term in the header above to get started!</h3>
+                            </div>
                             <div class="result col-xs-12 col-sm-4 col-md-4 col-lg-3" dir-paginate="product in products | filter:searchTerm | itemsPerPage: pageSize" current-page="currentPage">
                                 <div class="img-container">
                                     <img class="img-responsive center-block" ng-src="{{product.product.photo || defaultImage}}">
                                 </div>
                                 <h3>{{product.product.name}}</h3>
                                 <h5>{{ product.brand.name }}</h5>
-                                <h5>{{ product.category.name}}</h5>
                                 <p>{{product.product.invoiceDescription}}</p>
+                                <h5>{{ product.category.name}}</h5>
                                 <h5><a href="{{product.product.pdfUrl}}">Get More Info- Get the PDF for more specs!</a></h5>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div ng-controller="OtherController" class="other-controller">
+                <div class="container">
                     <div class="text-center">
                         <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="dirPagination.tpl.html"></dir-pagination-controls>
                     </div>

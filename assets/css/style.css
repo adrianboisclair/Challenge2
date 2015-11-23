@@ -7,6 +7,10 @@
     .my-controller .results div.result {
       vertical-align: top;
       min-height: 500px; }
+      .my-controller .results div.result h3 {
+        font-size: 16px; }
+      .my-controller .results div.result h5 {
+        font-size: 12px; }
     .my-controller .results ul, .my-controller .results li {
       padding: 0;
       list-style-type: none; }
@@ -36,7 +40,7 @@
 
 footer {
   height: 200px;
-  background: #4e7dff; }
+  background: black; }
 
 .result.ng-enter {
   /* standard transition code */
