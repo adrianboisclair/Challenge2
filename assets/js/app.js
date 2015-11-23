@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['angularUtils.directives.dirPagination']);
+var myApp = angular.module('myApp', ['angularUtils.directives.dirPagination', 'ngAnimate']);
 function MyController($scope, $http, $location){
     var url = "http://api.vip.supplyhub.com:19000/products";
     var termKey = 'query';
