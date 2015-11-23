@@ -1,3 +1,4 @@
+'use stric';
 //Load The Application into myApp
 var myApp = angular.module('myApp', ['angularUtils.directives.dirPagination', 'ngAnimate']);
 //Create MyController
@@ -18,7 +19,7 @@ function MyController($scope, $http, $location){
         return $location.search();
     }, function(){
         $scope.searchTerm = $location.search()[termKey] || "";
-        $scope.currentPage = $location.search()[pageKey] || "";
+        $scope.currentPage = $location.search()[pageKey] || "1";
     });
 
     $scope.$watch('searchTerm', function(term){
@@ -44,16 +45,15 @@ function MyController($scope, $http, $location){
                 $scope.products = response.data;  // Set products variable to response data
                 $scope.searchPage = 1;},  // Set pagination page to first page of results
             function errorCallback(response){
-                //if an error occures then log it.
+                //if an error occurs then log it.
                 console.log(response);
             });
     };
-    // pageChangeHandler - does something when page is chaged.
+    // pageChangeHandler - does something when page is changed.
     $scope.pageChangeHandler = function(num) {
         $scope.searchPage = num;
         console.log('going to page ' + num);
     };
-
 }
 
 myApp.controller('MyController', MyController);  //Instantiate controller
