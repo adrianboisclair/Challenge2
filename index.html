@@ -83,7 +83,8 @@
                                     <h5>{{ product.brand.name }}</h5>
                                     <p>{{product.product.invoiceDescription}}</p>
                                     <h5>{{ product.category.name}}</h5>
-                                    <h5><a href="{{product.product.pdfUrl}}">Get More Info- Get the PDF for more specs!</a></h5>
+                                    <h5 ng-show="product.product.pdfUrl"><a href="{{product.product.pdfUrl}}">Get the specs!</a></h5>
+                                    <h5 ng-hide="product.product.pdfUrl">Specs Unavailable</h5>
                                 </div> <!-- result / Product-->
                             </div><!-- results -->
                         </div><!-- panel-body -->
